@@ -19,9 +19,15 @@ Source "google_compute_instance" "svc-1" {
   }
 
   network_interface {
-    network = "default"
-
-    access_config {
-      // Ephemeral IP
+    network = "${google_compute_network.vpc_network.self_link}"
+    access_cofig = {
+      }
     }
   }
+
+1 references
+resource "google_compute_network" "vpc network" {
+  name                    = "terraform-network"       
+  auto_create_subnetworks = "true"
+  }
+
