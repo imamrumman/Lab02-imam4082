@@ -4,8 +4,8 @@ provider "google" {
   region  = "us-central1"
   zone    = "us-central1-c"
 }
-0 references
-Source "google"_"compute_instance" "svc-1" {
+ references
+resource "google"_"compute_instance" "svc-1" {
   name         = "imam4082-testvm1"
   machine_type = "f1-micro"
   
@@ -22,7 +22,7 @@ Source "google"_"compute_instance" "svc-1" {
     }
   }
 
-1 references
+references
 resource "google_compute_network" "vpc_network" {
   name                    = "terraform-network"       
   auto_create_subnetworks = "true"
