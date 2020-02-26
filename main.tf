@@ -5,7 +5,7 @@ provider "google" {
   zone    = "us-central1-c"
 }
 0 references
-Source "google"_compute_instance" "svc-1" {
+Source "google"_"compute_instance" "svc-1" {
   name         = "imam4082-testvm1"
   machine_type = "f1-micro"
   
